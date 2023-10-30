@@ -22,7 +22,7 @@ const EditBook = () => {
     }
     setLoading(true)
     axios
-      .put(`http://localhost:5000/books/${id}`, data)
+      .put(`https://mern-book-store-backend.vercel.app/${id}`, data)
       .then(() => {
         setLoading(false)
         enqueueSnackbar('Book Edited Successfully', { variant: 'success' })
@@ -38,7 +38,7 @@ const EditBook = () => {
   useEffect(() => {
     setLoading(true)
     axios
-      .get(`http://localhost:5000/books/${id}`)
+      .get(`https://mern-book-store-backend.vercel.app/${id}`)
       .then(res => {
         setTitle(res.data.book.title)
         setAuthor(res.data.book.author)

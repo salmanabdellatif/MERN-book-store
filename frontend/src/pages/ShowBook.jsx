@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Spinner from '../components/Spinner'
 import { useParams } from 'react-router-dom'
@@ -11,7 +11,7 @@ const ShowBook = () => {
   useEffect(() => {
     setLoading(true)
     axios
-      .get(`http://localhost:5000/books/${id}`)
+      .get(`https://mern-book-store-backend.vercel.app/${id}`)
       .then(res => {
         setBook(res.data.book)
         setLoading(false)
