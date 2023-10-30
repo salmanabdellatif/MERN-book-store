@@ -12,7 +12,7 @@ app.use(express.json()) // to make it able to send json in req body
 // option 2: Allow custom origins
 app.use(
   cors({
-    origin: 'https://mern-bookstore-backend.vercel.app',
+    origin: 'https://mern-bookstore-frontend.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   })
